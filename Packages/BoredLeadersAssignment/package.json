@@ -1,0 +1,14 @@
+{
+  "name": "com.boredleaders.assignment",
+  "version": "1.0.0",
+  "displayName": "Bored Leaders Assignment",
+  "description": "Assignment for submission",
+  "unity": "2020.3",
+  "keywords": [
+    "boredleaders",
+    "assignment"
+  ],
+  "author": {
+    "name": "Madhusudan"
+  }
+}
