@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47de3ac524b15a146b216c64e5d0b0b3, type: 3}
+  m_Name: Arjuna
+  m_EditorClassIdentifier: 
+  CharcName: Arjuna
+  CharcIndex: 0
+  AbilityCount: 4
+  Abilities:
+  - {fileID: 11400000, guid: 91a8a699d642563478c2f7ad4944d9a6, type: 2}
+  - {fileID: 11400000, guid: 7c69c6b3332ea8b47bd2287772f1f583, type: 2}
+  - {fileID: 11400000, guid: 2ea66d4324c85844497b9816cdaa4763, type: 2}
+  - {fileID: 11400000, guid: 79b45d6b8c5e3d047b66143d781c5666, type: 2}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb291d3f67945c49be662406d21e79a, type: 3}
+  m_Name: Ability2SO
+  m_EditorClassIdentifier: 
+  AbilityName: Blizzard
+  VfxEffect: {fileID: 7328488421423822379, guid: aac4e742cf44db945b414dea3de4da44, type: 3}
