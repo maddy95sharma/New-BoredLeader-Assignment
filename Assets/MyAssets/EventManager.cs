@@ -3,37 +3,28 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    // Detect character button click
-    public static class CharcClickEvent
-    {
-        public static event Action<int> CharcClickAction;
 
-        public static void RaisEvent(int charcIdx)
-        {
-            CharcClickAction?.Invoke(charcIdx);
-        }
+    public static event Action<int> CharcClickAction;
+    public static event Action CardClickAction;
+    public static event Action CharcPanelAction;
+
+    // Detect character button click
+    public static void RaisCharcEvent(int charcIdx)
+    {
+        CharcClickAction?.Invoke(charcIdx);
     }
 
     // Detect Card button click
-    public static class CardClickEvent
+    public static void RaisCardEvent()
     {
-        public static event Action CardClickAction;
-
-        public static void RaisEvent()
-        {
-            CardClickAction?.Invoke();
-        }
+        CardClickAction?.Invoke();
     }
 
     // To disable panel
-    public static class CharcPanelEvent
+    public static void RaisPanelEvent()
     {
-        public static event Action CharcPanelAction;
-
-        public static void RaisEvent()
-        {
-            CharcPanelAction?.Invoke();
-        }
+        CharcPanelAction?.Invoke();
     }
+ 
 
 }

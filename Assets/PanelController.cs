@@ -10,7 +10,7 @@ namespace BordLeaders
     {
         void OnEnable()
         {
-            EventManager.CharcPanelEvent.CharcPanelAction += DisablePanel;
+            EventManager.CharcPanelAction += DisablePanel;
         }
 
         void DisablePanel()
@@ -20,7 +20,7 @@ namespace BordLeaders
 
         void OnDisable()
         {
-            EventManager.CharcPanelEvent.CharcPanelAction -= DisablePanel; 
+            EventManager.CharcPanelAction -= DisablePanel; 
         }
     }
 }

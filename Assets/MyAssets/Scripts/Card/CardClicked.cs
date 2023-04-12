@@ -16,14 +16,14 @@ namespace BoredLeaders.Card
         // Subscribe OnCardClicked to button click event
         void Start()
         {   
-            btn = GetComponentInChildren<Button>();
+            btn = GetComponent<Button>();
             btn.onClick.AddListener(() => OnCardClicked());
         }
 
         // This Method Raises an event when card is clicked
         public void OnCardClicked()
         {   
-            EventManager.CardClickEvent.RaisEvent();
+            EventManager.RaisCardEvent();
             gameObject.SetActive(false);
         }
 

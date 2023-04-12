@@ -26,7 +26,7 @@ namespace BordLeaders
         // rais charc select event
         public void OnCharcSelet()
         {   
-            EventManager.CharcClickEvent.RaisEvent(characterSO.CharcIndex);
+            EventManager.RaisCharcEvent(characterSO.CharcIndex);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
 

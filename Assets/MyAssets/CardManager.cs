@@ -21,18 +21,18 @@ namespace BordLeaders
         // When character button is click this method is called
         void OnEnable()
         {
-            EventManager.CharcClickEvent.CharcClickAction += SetCards;
+            EventManager.CharcClickAction += SetCards;
         }
 
         // This class is responsible for setting up card and its card abilities based on character selection
         public void SetCards(int SeclectedCharc) 
         {
-            EventManager.CharcPanelEvent.RaisEvent();
+            EventManager.RaisPanelEvent();
             _playerCharc = _characters[SeclectedCharc];
             _charcAbilityCount = _playerCharc.Abilities.Length;
             for (int i =0; i<_charcAbilityCount; i++ )
             {
-                GameObject card = Instantiate(_cardPrefab, transform.position, Quaternion.identity, _cardParent);
+                GameObject card = Instantiate(_cardPrefab, _cardParent.transform);
                 CardAbilityView cardAbility = card.GetComponent<CardAbilityView>();
                 cardAbility.SetAbility(_playerCharc.Abilities[i]);
             }
@@ -42,7 +42,7 @@ namespace BordLeaders
         // unsubscribe from events
         void OnDisable()
         {
-            EventManager.CharcClickEvent.CharcClickAction -= SetCards; 
+            EventManager.CharcClickAction -= SetCards; 
         }
     }
 }

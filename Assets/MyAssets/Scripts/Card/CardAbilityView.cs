@@ -12,7 +12,6 @@ namespace BoredLeaders.Card
     public class CardAbilityView : MonoBehaviour 
     {
         private AbilitySO ability;
-        private Button _btn;
         
         // Setting the ability of the card
         public void SetAbility(AbilitySO ability){
@@ -21,13 +20,13 @@ namespace BoredLeaders.Card
 
         void Start()
         {
-            Text TextComponent = this.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
+            Text TextComponent = this.transform.GetChild(0).GetComponent<Text>();
             TextComponent.text = ability.AbilityName;
         }
 
         void OnEnable()
         {
-            EventManager.CardClickEvent.CardClickAction += OnCardUse; 
+            EventManager.CardClickAction += OnCardUse; 
         }
 
         // When "card click" event is triggered, this method will play vfx
@@ -38,7 +37,7 @@ namespace BoredLeaders.Card
 
         // Unsubscribe OnCardUse() to card click event 
         void OnDisabled(){
-            EventManager.CardClickEvent.CardClickAction += OnCardUse; 
+            EventManager.CardClickAction += OnCardUse; 
         }
     }
 }
