@@ -10,13 +10,13 @@ namespace BoredLeaders
     public class DiceClicked : MonoBehaviour
     {
         public static event Action DiceClickEvent;
-        private Button btn;
+        private Button _btn;
         
         // Subscribe OnDiceClicked to button click event
         void Start()
         {   
-            btn = GetComponentInChildren<Button>();
-            btn.onClick.AddListener(() => OnDiceClicked());
+            _btn = GetComponentInChildren<Button>();
+            _btn.onClick.AddListener(() => OnDiceClicked());
         }
 
         // Triggers DiceClickEvent event

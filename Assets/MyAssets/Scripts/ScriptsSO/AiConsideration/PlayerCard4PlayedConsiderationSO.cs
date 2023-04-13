@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BoredLeaders;
 using UnityEngine;
 
+// Scriptable object script for card 4 Ai consideration 
 [CreateAssetMenu(fileName = "Player Card4 Played Consideration", menuName ="ScriptableObject/AI/Consideration/Player Card4 Played Consideration")]
 public class PlayerCard4PlayedConsiderationSO : AIConsideratinSO
 {

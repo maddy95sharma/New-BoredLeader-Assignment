@@ -11,13 +11,13 @@ namespace BoredLeaders.Card
 
     public class CardClicked : MonoBehaviour
     {
-        private Button btn;
+        private Button _btn;
         
         // Subscribe OnCardClicked to button click event
         void Start()
         {   
-            btn = GetComponent<Button>();
-            btn.onClick.AddListener(() => OnCardClicked());
+            _btn = GetComponent<Button>();
+            _btn.onClick.AddListener(() => OnCardClicked());
         }
 
         // This Method Raises an event when card is clicked
@@ -30,7 +30,7 @@ namespace BoredLeaders.Card
         // Removing all subscriptions form button click event
         void OnDisabl()
         {
-            btn.onClick.RemoveAllListeners();
+            _btn.onClick.RemoveAllListeners();
         }
 
     }

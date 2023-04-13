@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using BoredLeaders;
 using UnityEngine;
 
-
+// Abstract class for Ai Action scriptable object
 public abstract class AIActionSO : ScriptableObject
 {
     public string Name;

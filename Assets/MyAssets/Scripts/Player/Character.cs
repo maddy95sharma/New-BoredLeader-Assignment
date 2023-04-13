@@ -9,7 +9,7 @@ namespace BordLeaders
 {
     public class Character : MonoBehaviour
     {
-        [SerializeField] private CharacterSO characterSO;
+        [SerializeField] private CharacterSO _characterSO;
         private Button _btn;
 
         // Get ref to button and listen to the button click
@@ -20,13 +20,13 @@ namespace BordLeaders
             _btn.onClick.AddListener(() => OnCharcSelet());
 
             Text TextComponent = this.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>();
-            TextComponent.text = characterSO.CharcName;
+            TextComponent.text = _characterSO.CharcName;
         }
         
         // rais charc select event
         public void OnCharcSelet()
         {   
-            EventManager.RaisCharcEvent(characterSO.CharcIndex);
+            EventManager.RaisCharcEvent(_characterSO.CharcIndex);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
 

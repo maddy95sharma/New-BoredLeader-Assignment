@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using BoredLeaders;
 using UnityEngine;
 
+// Scriptable object script for card 1 Ai Action 
+
 [CreateAssetMenu(fileName = "Player Card1 Playable Action", menuName ="ScriptableObject/AI/Action/Player Card1 Playable")]
 
 public class PlayerCard1PlayableActionSO : AIActionSO

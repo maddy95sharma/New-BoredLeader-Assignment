@@ -9,11 +9,11 @@ namespace BoredLeaders
         public bool finishDecidingAction {get; set;}
         public AIActionSO actionToDo{ get; set;}
         
-        private NpcController npcController;
+        private NpcController _npcController;
 
         void Awake()
         {
-            npcController = GetComponent<NpcController>();
+            _npcController = GetComponent<NpcController>();
         }
 
 
@@ -24,7 +24,7 @@ namespace BoredLeaders
             {
                 if(ActionScore(actions[i]) == 1)
                 {
-                    actions[i].ExecuteAction(npcController); 
+                    actions[i].ExecuteAction(_npcController); 
                 }
             }
 
@@ -35,7 +35,7 @@ namespace BoredLeaders
             float score = 1f;
             for(int i=0; i<action.consideration.Length; i++ )
             {
-                float considerationScore = action.consideration[i].ConsiderationScore(npcController);
+                float considerationScore = action.consideration[i].ConsiderationScore(_npcController);
                 score *= considerationScore;
 
                 if(score == 0)

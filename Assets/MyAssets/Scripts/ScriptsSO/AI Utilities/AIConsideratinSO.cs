@@ -4,6 +4,7 @@ using BoredLeaders;
 using UnityEngine;
 
 
+// Abstract class for Ai Consideration scriptable object
 public abstract class AIConsideratinSO : ScriptableObject
 {
     public string Name;

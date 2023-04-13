@@ -2,6 +2,8 @@
 // using System.Collections.Generic;
 using UnityEngine;
 
+
+// scriptable object script for ability 3
 [CreateAssetMenu(menuName ="ScriptableObject/Ability/Ability3")]
 public class Ability3SO : AbilitySO
 {
